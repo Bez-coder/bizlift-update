@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://bizlift-et.netlify.app",
+    origin: "https://bizlift-app.vercel.app/",
     credentials: true,
   })
 );
