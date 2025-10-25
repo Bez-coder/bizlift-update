@@ -19,9 +19,12 @@ const MyGoodsPage = () => {
       }
 
       try {
-        const res = await axios.get("http://localhost:5000/mygoods", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const res = await axios.get(
+          "https://bizlift-server.vercel.app//mygoods",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
         setGoods(res.data.goods || []);
       } catch (err) {
         setMessage("Failed to load goods.");
@@ -38,7 +41,7 @@ const MyGoodsPage = () => {
     if (!token) return;
 
     try {
-      await axios.delete(`http://localhost:5000/mygoods/${id}`, {
+      await axios.delete(`https://bizlift-server.vercel.app//mygoods/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setGoods(goods.filter((item) => item._id !== id));
@@ -48,7 +51,7 @@ const MyGoodsPage = () => {
       setMessage("Error deleting item.");
     }
   };
-const handleLogout = () => {
+  const handleLogout = () => {
     localStorage.removeItem("token");
     navigate("/login");
   };
@@ -76,13 +79,17 @@ const handleLogout = () => {
           </Link>
           <Link
             to="/dashboard/cashbook"
-            className={location.pathname === "/dashboard/cashbook" ? "active" : ""}
+            className={
+              location.pathname === "/dashboard/cashbook" ? "active" : ""
+            }
           >
             Cash Book
           </Link>
           <Link
             to="/dashboard/guidance"
-            className={location.pathname === "/dashboard/guidance" ? "active" : ""}
+            className={
+              location.pathname === "/dashboard/guidance" ? "active" : ""
+            }
           >
             Guidance
           </Link>
@@ -111,7 +118,11 @@ const handleLogout = () => {
             {goods.map((item) => (
               <div className="goods-card" key={item._id}>
                 <img
-                  src={item.photo ? `http://localhost:5000/${item.photo}` : "/placeholder.png"}
+                  src={
+                    item.photo
+                      ? `https://bizlift-server.vercel.app//${item.photo}`
+                      : "/placeholder.png"
+                  }
                   alt={item.title}
                   className="goods-img"
                 />

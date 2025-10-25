@@ -5,7 +5,12 @@ import "./Auth.css";
 
 const Signup = () => {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ name: "", email: "", password: "", confirmPassword: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -20,11 +25,14 @@ const Signup = () => {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/signup", {
-        name: form.name,
-        email: form.email,
-        password: form.password,
-      });
+      const res = await axios.post(
+        "https://bizlift-server.vercel.app//signup",
+        {
+          name: form.name,
+          email: form.email,
+          password: form.password,
+        }
+      );
       setSuccess(res.data.message);
       setError("");
       navigate("/login"); // redirect after successful signup
@@ -40,26 +48,53 @@ const Signup = () => {
       <form onSubmit={handleSubmit} className="auth-form">
         <label>
           Name:
-          <input type="text" name="name" value={form.name} onChange={handleChange} required />
+          <input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
         </label>
         <label>
           Email:
-          <input type="email" name="email" value={form.email} onChange={handleChange} required />
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
         </label>
         <label>
           Password:
-          <input type="password" name="password" value={form.password} onChange={handleChange} required />
+          <input
+            type="password"
+            name="password"
+            value={form.password}
+            onChange={handleChange}
+            required
+          />
         </label>
         <label>
           Confirm Password:
-          <input type="password" name="confirmPassword" value={form.confirmPassword} onChange={handleChange} required />
+          <input
+            type="password"
+            name="confirmPassword"
+            value={form.confirmPassword}
+            onChange={handleChange}
+            required
+          />
         </label>
         {error && <p className="error">{error}</p>}
         {success && <p className="success">{success}</p>}
         <button type="submit">Sign Up</button>
       </form>
       <p>
-        Already have an account? <span className="link" onClick={() => navigate("/login")}>Login</span>
+        Already have an account?{" "}
+        <span className="link" onClick={() => navigate("/login")}>
+          Login
+        </span>
       </p>
     </div>
   );

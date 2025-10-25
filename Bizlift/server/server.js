@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://bizlift-et.netlify.app",
     credentials: true,
   })
 );
@@ -90,7 +90,6 @@ app.get("/dashboard", authenticate, async (req, res) => {
 
 // ------------------ ROUTES ------------------
 app.use("/sell", sellRoutes);
-
 
 // ------------------ START SERVER ------------------
 const PORT = process.env.PORT || 5000;

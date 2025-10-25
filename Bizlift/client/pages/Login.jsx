@@ -19,7 +19,7 @@ const Login = () => {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/login", {
+      const res = await axios.post("https://bizlift-server.vercel.app//login", {
         email: form.email,
         password: form.password,
       });
@@ -39,17 +39,32 @@ const Login = () => {
       <form onSubmit={handleSubmit} className="auth-form">
         <label>
           Email:
-          <input type="email" name="email" value={form.email} onChange={handleChange} required />
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
         </label>
         <label>
           Password:
-          <input type="password" name="password" value={form.password} onChange={handleChange} required />
+          <input
+            type="password"
+            name="password"
+            value={form.password}
+            onChange={handleChange}
+            required
+          />
         </label>
         {error && <p className="error">{error}</p>}
         <button type="submit">Login</button>
       </form>
       <p>
-        Don't have an account? <span className="link" onClick={() => navigate("/signup")}>Sign Up</span>
+        Don't have an account?{" "}
+        <span className="link" onClick={() => navigate("/signup")}>
+          Sign Up
+        </span>
       </p>
     </div>
   );
