@@ -1,0 +1,315 @@
+/* Container */
+.cashbook-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #0c2656;
+  
+}
+
+h1 {
+  text-align: center;
+  color: #a8904f;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Main section: table + income side by side */
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+ 
+}
+
+/* Marketplace Table Section */
+.marketplace-section {
+  flex: 1 1 600px;
+}
+
+.marketplace-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.marketplace-table th,
+.marketplace-table td {
+  border: 1px solid #ffffff;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.marketplace-table th {
+  background-color: #0c2656;
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.marketplace-table td input[type="text"],
+.marketplace-table td input[type="number"] {
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #babbbd;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+/* Amount controls */
+.amount-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.amount-controls button {
+  width: 30px;
+  height: 30px;
+  background-color: #a8904f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.amount-controls span {
+  min-width: 25px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Add product button and total cost */
+.add-product {
+  margin: 10px 0;
+  padding: 8px 12px;
+  background-color: #0c2656;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.total-cost {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Income Calculator Section */
+.income-section {
+  flex: 1 1 300px;
+}
+
+.calculator {
+  padding: 15px;
+  border: 1px solid #cfd0d3;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.calculator h3 {
+  color: #a8904f;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.calculator label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+.calculator input[type="number"] {
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #bebfc0;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+/* Revenue Box */
+.revenue-box {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.revenue-box.profit {
+  background-color: #d4edda;
+  color: #0c2656;
+}
+
+.revenue-box.loss {
+  background-color: #f08080;
+  color: #fff;
+}
+
+.revenue-box.neutral {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.charts-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.chart {
+  flex: 1 1 400px;
+  max-width: 400px;
+  background-color: #f6f9fc;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #fefefe;
+}
+
+.chart h3 {
+  text-align: center;
+  color: #a8904f;
+  margin-bottom: 10px;
+}
+.week-section {
+  margin-bottom: 30px;
+  border: 2px solid #d8d9db;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fefefe;
+}
+
+.add-week {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #0c2656;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+/* Overall Growth Section - clean, medium-sized, no extra boxes */
+.overall-growth-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.line-chart {
+  flex: 1 1 500px; /* medium width */
+  max-width: 500px;
+}
+
+.line-chart h3 {
+  text-align: center;
+  color: #a8904f;
+  margin-bottom: 10px;
+}
+
+.growth-info {
+  flex: 1 1 300px;
+  max-width: 300px;
+  font-weight: 500;
+  color: #0c2656;
+}
+
+.growth-info h3 {
+  color: #a8904f;
+  margin-bottom: 10px;
+}
+
+.growth-info p {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Remove any extra padding or borders for a clean look */
+.line-chart,
+.growth-info {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.cashbook-layout {
+  display: flex;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+}
+
+.cashbook-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.nav-links a {
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .overall-growth-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line-chart,
+  .growth-info {
+    max-width: 90%;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .charts-section {
+    flex-direction: column;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-section {
+    flex-direction: column;
+  }
+
+  .marketplace-section,
+  .income-section {
+    flex: 1 1 100%;
+  }
+
+  .marketplace-table td input,
+  .marketplace-table th select {
+    width: 90%;
+  }
+}

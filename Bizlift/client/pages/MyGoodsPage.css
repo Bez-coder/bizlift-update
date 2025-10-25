@@ -1,0 +1,150 @@
+.goods-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+
+}
+
+/* Sidebar */
+.goods-sidebar {
+  width: 220px;
+  background-color: #0c2656;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-logo h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #a8904f;
+}
+
+.goods-nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.3rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.goods-nav a:hover {
+  background-color: #a8904f;
+  color: #fff;
+}
+
+.goods-nav a.active {
+  background-color: #a8904f;
+  font-weight: bold;
+}
+
+/* Main Content */
+.goods-content {
+  flex: 1;
+  padding: 2rem 3rem;
+  background-color: #f9f9f9;
+  padding: 80px;
+}
+
+.goods-content h2 {
+  color: #0c2656;
+  margin-bottom: 1.5rem;
+}
+
+/* Grid */
+.goods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.goods-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.goods-card:hover {
+  transform: translateY(-4px);
+}
+
+.goods-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.goods-card h3 {
+  color: #0c2656;
+  margin-bottom: 0.5rem;
+}
+
+.goods-price {
+  color: #a8904f;
+  font-weight: bold;
+}
+
+.goods-description {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+}
+
+/* Buttons */
+.goods-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.edit-btn {
+  background-color: #a8904f;
+  color: white;
+  text-decoration: none;
+}
+
+.delete-btn {
+  background-color: #b02a37;
+  color: white;
+}
+
+.goods-message {
+  margin-top: 1rem;
+  color: #0c2656;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .goods-layout {
+    flex-direction: column;
+  }
+
+  .goods-sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .goods-content {
+    padding: 1.5rem;
+  }
+}

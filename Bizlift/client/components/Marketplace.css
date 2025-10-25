@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+.marketplace {
+  padding: 40px;
+  background-color: #f9fafc;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.marketplace h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #0c2656;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+/* ✅ 3–4 cards per row depending on screen size */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+/* ✅ Card style */
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Image */
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* ✅ Text info */
+.product-info {
+  padding: 16px 18px;
+}
+
+.product-info h3 {
+  margin: 0 0 8px 0;
+  color: #0c2656;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.desc {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.product-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ✅ Links */
+.product-info a {
+  color: #a8904f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.product-info a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Seller info */
+.seller {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #777;
+  font-style: italic;
+  border-top: 1px solid #eee;
+  padding-top: 6px;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .marketplace {
+    padding: 20px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}

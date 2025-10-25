@@ -1,0 +1,148 @@
+/* Layout */
+.sell-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  padding-top: 40px;
+}
+
+/* Sidebar */
+.sell-sidebar {
+  width: 220px;
+  background-color: #0c2656;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sell-logo h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #a8904f;
+}
+
+.sell-nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.3rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.sell-nav a:hover {
+  background-color: #a8904f;
+  color: #fff;
+}
+
+.sell-nav a.active {
+  background-color: #a8904f;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Main Content */
+.sell-content {
+  flex: 1;
+  padding: 2rem 3rem;
+  background-color: #f9f9f9;
+}
+
+.sell-content h1 {
+  color: #0c2656;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* Form Styles */
+.sell-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.sell-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #0c2656;
+  font-weight: 600;
+}
+
+.sell-form input,
+.sell-form textarea,
+.sell-form select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.sell-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Submit Button */
+.sell-submit-btn {
+  background-color: #0c2656;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.sell-submit-btn:hover {
+  background-color: #a8904f;
+}
+
+/* Preview Image */
+.sell-preview {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Message */
+.sell-message {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #0c2656;
+  background-color: #f6f9fc;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sell-layout {
+    flex-direction: column;
+  }
+
+  .sell-sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .sell-content {
+    padding: 1.5rem;
+  }
+
+  .sell-form {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+/* BusinessRegistration.css */
+.guide-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #0c2656;
+  padding: 80px;
+}
+
+.guide-container h2 {
+  color: #a8904f;
+  margin-bottom: 20px;
+}
+
+.guide-container ol {
+  margin-left: 20px;
+}
+
+.guide-container li {
+  margin-bottom: 10px;
+}
+
+.guide-container a {
+  color: #a8904f;
+  font-weight: 600;
+}
+
+.guide-container a:hover {
+  text-decoration: underline;
+}
+.business-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #0c2656;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.sidebar .logo h2 {
+  color: #a8904f;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.sidebar .nav-links a:hover {
+  background-color: #a8904f;
+  color: #0c2656;
+  transition: all 0.2s ease;
+}
+

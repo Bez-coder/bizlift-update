@@ -1,0 +1,126 @@
+/* Layout */
+.guidance-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+}
+
+/* Sidebar */
+.guidance-sidebar {
+  width: 220px;
+  background-color: #0c2656;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.guidance-logo h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #a8904f;
+}
+
+.guidance-nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.3rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.guidance-nav a:hover {
+  background-color: #a8904f;
+  color: #fff;
+}
+
+.guidance-nav a.active {
+  background-color: #a8904f;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Main Content */
+.guidance-content {
+  flex: 1;
+  padding: 2rem 3rem;
+  background-color: #f9f9f9;
+}
+
+.guidance-content h2 {
+  color: #0c2656;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.guidance-intro {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Cards Grid */
+.guidance-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.guidance-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guidance-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.guidance-card h3 {
+  color: #0c2656;
+  margin-bottom: 0.5rem;
+}
+
+.guidance-card p {
+  color: #444;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Read More Button */
+.guidance-btn {
+  display: inline-block;
+  background-color: #a8904f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.guidance-btn:hover {
+  background-color: #0c2656;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .guidance-layout {
+    flex-direction: column;
+  }
+
+  .guidance-sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .guidance-content {
+    padding: 1.5rem;
+  }
+}
