@@ -50,7 +50,7 @@ const SellPage = () => {
 
     try {
       const res = await axios.post(
-        "https://bizlift-server.vercel.app//sell",
+        "https://bizlift-server.vercel.app/sell",
         data,
         {
           headers: {

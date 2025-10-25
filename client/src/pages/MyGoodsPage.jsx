@@ -20,7 +20,7 @@ const MyGoodsPage = () => {
 
       try {
         const res = await axios.get(
-          "https://bizlift-server.vercel.app//mygoods",
+          "https://bizlift-server.vercel.app/mygoods",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -41,7 +41,7 @@ const MyGoodsPage = () => {
     if (!token) return;
 
     try {
-      await axios.delete(`https://bizlift-server.vercel.app//mygoods/${id}`, {
+      await axios.delete(`https://bizlift-server.vercel.app/mygoods/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setGoods(goods.filter((item) => item._id !== id));
@@ -120,7 +120,7 @@ const MyGoodsPage = () => {
                 <img
                   src={
                     item.photo
-                      ? `https://bizlift-server.vercel.app//${item.photo}`
+                      ? `https://bizlift-server.vercel.app/${item.photo}`
                       : "/placeholder.png"
                   }
                   alt={item.title}

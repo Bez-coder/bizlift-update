@@ -19,7 +19,7 @@ const Login = () => {
       return;
     }
     try {
-      const res = await axios.post("https://bizlift-server.vercel.app//login", {
+      const res = await axios.post("https://bizlift-server.vercel.app/login", {
         email: form.email,
         password: form.password,
       });

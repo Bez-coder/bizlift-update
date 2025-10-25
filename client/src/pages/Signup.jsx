@@ -25,14 +25,11 @@ const Signup = () => {
       return;
     }
     try {
-      const res = await axios.post(
-        "https://bizlift-server.vercel.app//signup",
-        {
-          name: form.name,
-          email: form.email,
-          password: form.password,
-        }
-      );
+      const res = await axios.post("https://bizlift-server.vercel.app/signup", {
+        name: form.name,
+        email: form.email,
+        password: form.password,
+      });
       setSuccess(res.data.message);
       setError("");
       navigate("/login"); // redirect after successful signup

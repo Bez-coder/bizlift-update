@@ -25,7 +25,7 @@ const Dashboard = () => {
 
       try {
         const res = await axios.get(
-          "https://bizlift-server.vercel.app//dashboard",
+          "https://bizlift-server.vercel.app/dashboard",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
