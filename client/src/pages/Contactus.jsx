@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import "./ContactUs.css";
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (e) => {
@@ -78,9 +82,15 @@ const ContactUs = () => {
           <h2>Get in Touch</h2>
           <p>Reach us through the following channels:</p>
           <ul>
-            <li><strong>Email:</strong> support@bizlift.com</li>
-            <li><strong>Phone:</strong> +251 900 123 456</li>
-            <li><strong>Address:</strong> Addis Ababa, Ethiopia</li>
+            <li>
+              <strong>Email:</strong> support@bizlift.com
+            </li>
+            <li>
+              <strong>Phone:</strong> +251 900 123 456
+            </li>
+            <li>
+              <strong>Address:</strong> Addis Ababa, Ethiopia
+            </li>
           </ul>
           <div className="contact-icons">
             <i className="fa-solid fa-envelope"></i>
@@ -94,7 +104,9 @@ const ContactUs = () => {
       <div className="contact-cta">
         <h3>Ready to grow your business?</h3>
         <p>Join BizLift today and take your business to the next level.</p>
-        <a href="/signup" className="cta-btn">Get Started</a>
+        <a href="/signup" className="cta-btn">
+          Get Started
+        </a>
       </div>
     </div>
   );

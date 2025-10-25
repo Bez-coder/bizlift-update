@@ -5,7 +5,6 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import HomePage from "./pages/HomePage";
-import ContactUs from "./pages/ContactUs";
 import GuidancePage from "./pages/GuidancePage";
 import BusinessRegistration from "./pages/BusinessRegistration";
 import MyGoodsPage from "./pages/MyGoodsPage";
@@ -13,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SellPage from "./user/SellPage";
 import Marketplace from "./components/MarketPlace";
+import ContactUs from "./pages/ContactUs";
 
 const App = () => {
   return (
