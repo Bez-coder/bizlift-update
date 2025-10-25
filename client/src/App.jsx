@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SellPage from "./user/SellPage";
 import Marketplace from "./components/MarketPlace";
-import ContactUs from "./pages/ContactUs";
+import ContactUs from "./pages/Contact-us";
 
 const App = () => {
   return (
