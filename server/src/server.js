@@ -11,7 +11,12 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://bizlift-app.vercel.app",
+    // multiple origins
+
+    origin: [
+      "https://bizlift-app.vercel.app",
+      "https://bizlift-et.netlify.app",
+    ],
     credentials: true,
   })
 );
