@@ -3,7 +3,7 @@ const { PrismaClient } = require("@prisma/client");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
-const sellRoutes = require("./src/routes/sell");
+const sellRoutes = require("./routes/sell");
 require("dotenv").config();
 
 const prisma = new PrismaClient();
